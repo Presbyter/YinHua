@@ -1,0 +1,38 @@
+@model YinHua.Areas.Admin.Models.LoginModel
+
+<form asp-action="Login" asp-controller="Account" method="POST">
+    <fieldset>
+        <div asp-validation-summary="All"></div>
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+                <input asp-for="MobileNumber" class="form-control" placeholder="Mobile Number" />
+                <i class="ace-icon fa fa-user"></i>
+            </span>
+            <span asp-validation-for="MobileNumber"></span>
+        </label>
+
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+                <input asp-for="Password" class="form-control" placeholder="Password" />
+                <i class="ace-icon fa fa-lock"></i>
+            </span>
+            <span asp-validation-for="Password"></span>
+        </label>
+
+        <div class="space"></div>
+
+        <div class="clearfix">
+            <label class="inline">
+                <input type="checkbox" class="ace" />
+                <span class="lbl"> Remember Me</span>
+            </label>
+
+            <button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
+                <i class="ace-icon fa fa-key"></i>
+                <span class="bigger-110">Login</span>
+            </button>
+        </div>
+
+        <div class="space-4"></div>
+    </fieldset>
+</form>

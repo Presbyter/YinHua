@@ -1,0 +1,84 @@
+@model YinHua.Areas.Admin.Models.Register
+<form asp-action="Register" asp-controller="Account" method="POST">
+    <fieldset>
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+                <input asp-for="MobileNumber" class="form-control" placeholder="Mobile Number">
+                <i class="ace-icon fa fa-mobile"></i>
+            </span>
+            <span asp-validation-for="MobileNumber"></span>
+        </label>
+
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+                <input asp-for="Name" class="form-control" placeholder="Name">
+                <i class="ace-icon fa fa-user"></i>
+            </span>
+            <span asp-validation-for="Name"></span>
+        </label>
+
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+                <input asp-for="Sex" class="form-control" placeholder="Sex">
+                <i class="ace-icon fa fa-user"></i>
+            </span>
+            <span asp-validation-for="Sex"></span>
+        </label>
+
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+                <input asp-for="Email" class="form-control" placeholder="Email">
+                <i class="ace-icon fa fa-envelope"></i>
+            </span>
+            <span asp-validation-for="Email"></span>
+        </label>
+
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+                <input asp-for="Area" class="form-control" placeholder="Area">
+                <i class="ace-icon fa fa-area-chart"></i>
+            </span>
+            <span asp-validation-for="Area"></span>
+        </label>
+
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+                <input asp-for="Company" class="form-control" placeholder="School / Company">
+                <i class="ace-icon fa fa-users"></i>
+            </span>
+            <span asp-validation-for="Company"></span>
+        </label>
+
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+                <input asp-for="Password" class="form-control" placeholder="Password">
+                <i class="ace-icon fa fa-users"></i>
+            </span>
+            <span asp-validation-for="Password"></span>
+        </label>
+
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+                <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password">
+                <i class="ace-icon fa fa-users"></i>
+            </span>
+            <span asp-validation-for="ConfirmPassword"></span>
+        </label>
+        
+        
+        <div class="space-24"></div>
+
+        <div class="clearfix">
+            <button type="reset" class="width-30 pull-left btn btn-sm">
+                <i class="ace-icon fa fa-refresh"></i>
+                <span class="bigger-110">Reset</span>
+            </button>
+
+            <button type="submit" class="width-65 pull-right btn btn-sm btn-success">
+                <span class="bigger-110">Register</span>
+
+                <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+            </button>
+        </div>
+    </fieldset>
+</form>

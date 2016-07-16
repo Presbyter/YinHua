@@ -1,0 +1,56 @@
+@model IEnumerable<YinHua.Data.User>
+@{
+    int i = 0;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-hover table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Mobile Number</th>
+                    <th>Sex</th>
+                    <th>Email Address</th>
+                    <th>Area</th>
+                    <th>School or Company</th>
+                    <th>CreateTime</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <span>@((++i).ToString())</span>
+                        </td>
+                        <td>@item.Name</td>
+                        <td>@item.MobileNumber</td>
+                        <td>@item.Sex</td>
+                        <td>@item.Email</td>
+                        <td>@item.Area</td>
+                        <td>@item.Company</td>
+                        <td>@item.CreateTime</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

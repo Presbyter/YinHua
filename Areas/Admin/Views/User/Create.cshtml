@@ -1,0 +1,35 @@
+@model YinHua.Data.User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <div class="container">
+        <form asp-action="Create" asp-controller="User" method="POST">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="input-group">
+                        <input asp-for="Name" class="form-control" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">Save</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
